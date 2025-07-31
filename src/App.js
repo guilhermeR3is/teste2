@@ -443,7 +443,7 @@ const Step2 = ({
             onClick={() => setCurrentStep(3)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium"
           >
-            Confirmar
+            Continuar
           </button>
         </div>
       )}
@@ -461,9 +461,17 @@ const Step3 = ({
   const dataEscolhida = datasDisponiveis.find(d => d.data === agendamento.data);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="min-h-screen "
+    style={{backgroundImage: "url('/imgCentral.jpg')", backgroundSize:"cover", backgroundPosition: "center"}}>
+      <div className="bg-white/70 border-b border-gray-200">
+       
+      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"><button
+            onClick={() => setCurrentStep(2)}
+            className="mr-4 p-2 text-gray-600 hover:text-gray-800 rounded-md hover:bg-gray-100"
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </button>
           <div className="flex items-center">
             <CheckCircle className="h-8 w-8 text-green-600 mr-3" />
             <div>
@@ -565,7 +573,7 @@ const Step3 = ({
               onClick={confirmarAgendamento}
               className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md font-medium"
             >
-              Confirmar Agendamento
+              Finalizar
             </button>
           </div>
         </div>
